@@ -5,7 +5,6 @@ import re
 def addNumbers(s):
     sum_ = 0
     s_list = re.split('[a-z]', s)
-    print(s_list)
     for i in s_list:
         if i != '':
            sum_ += int(i)
