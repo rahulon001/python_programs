@@ -16,7 +16,6 @@ def printRoman(number):
             div -= 1
         i -= 1
 
-
 # Driver code
 if __name__ == "__main__":
     number = 126
