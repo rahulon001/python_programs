@@ -1,3 +1,5 @@
+
+# shift the letter "key" times ahead
 def caesarCipherEncryptor(string, key):
     # Write your code here.
     result = ""
@@ -9,4 +11,4 @@ def caesarCipherEncryptor(string, key):
             result += chr((ord(char)+ key-97) % 26 +97)
     return result
 
-print(caesarCipherEncryptor("abccd", 53))
+print(caesarCipherEncryptor("abccd", 26))

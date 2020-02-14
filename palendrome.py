@@ -12,37 +12,29 @@ def isPalendrome1(string):
 
     return string == ''.join(reversedString)
 
-def isPalendrome_recursively(string):
-    leftIdx = 0
-    righIdx = len(string)-1
-    while(leftIdx < righIdx):
-        if string[leftIdx] != string[righIdx]:
+
+def isPalendrome_best(string: str) -> bool:
+    left_idx = 0
+    right_idx = len(string) - 1
+    while left_idx < right_idx:
+        if string[left_idx] != string[right_idx]:
             return False
-        leftIdx+=1
-        righIdx-=1
+        left_idx += 1
+        right_idx -= 1
     return True
 
-def isPalendrome_best(string):
-    leftIdx = 0
-    righIdx = len(string)-1
-    while(leftIdx < righIdx):
-        if string[leftIdx] != string[righIdx]:
-            return False
-        leftIdx+=1
-        righIdx-=1
-    return True
 
-print(isPalendrome_best("aba"))
+if __name__ == "__main__":
+    print(isPalendrome_best("aba"))
 
-
-
-import os
-from os import path
-import shutil
-
-src = "C:\\Users\\****\\Desktop\\test1\\"
-dst = "C:\\Users\\****\\Desktop\\test2\\"
-
-files = [i for i in os.listdir(src) if i.startswith("CTASK") and path.isfile(path.join(src, i))]
-for f in files:
-    shutil.copy(path.join(src, f), dst)
+#
+# import os
+# from os import path
+# import shutil
+#
+# src = "C:\\Users\\****\\Desktop\\test1\\"
+# dst = "C:\\Users\\****\\Desktop\\test2\\"
+#
+# files = [i for i in os.listdir(src) if i.startswith("CTASK") and path.isfile(path.join(src, i))]
+# for f in files:
+#     shutil.copy(path.join(src, f), dst)
